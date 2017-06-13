@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="nicola.pokerstarsleaguecalculator.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Iscritti"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.016"
+        android:id="@+id/textView2"
+        app:layout_constraintHorizontal_bias="0.109" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rimasti"
+        app:layout_constraintLeft_toRightOf="@+id/textView2"
+        android:layout_marginLeft="129dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <EditText
+        android:id="@+id/JTIscritti"
+        android:layout_width="129dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="number"
+        android:selectAllOnFocus="false"
+        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/JTRimasti"
+        android:layout_width="129dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintHorizontal_bias="0.883"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/JLPercentuale"
+        android:layout_width="125dp"
+        android:layout_height="36dp"
+        android:layout_marginLeft="119dp"
+        android:layout_marginTop="19dp"
+        app:layout_constraintLeft_toRightOf="@+id/percento"
+        app:layout_constraintTop_toBottomOf="@+id/JTIscritti" />
+
+    <TextView
+        android:id="@+id/JLPremiati"
+        android:layout_width="122dp"
+        android:layout_height="35dp"
+        android:cursorVisible="false"
+        android:text=""
+        android:textAllCaps="false"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/aPremio"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintHorizontal_bias="0.443"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/JLPercentuale" />
+
+    <TextView
+        android:id="@+id/aPremio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:text="a premio: "
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/percento" />
+
+    <TextView
+        android:id="@+id/Punti"
+        android:layout_width="41dp"
+        android:layout_height="17dp"
+        android:text="Punti"
+        android:layout_marginLeft="35dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/aPremio" />
+
+    <TextView
+        android:id="@+id/JLPunti"
+        android:layout_width="122dp"
+        android:layout_height="35dp"
+        android:text="0"
+        android:layout_marginRight="74dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/Punti"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintHorizontal_bias="1.0"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/JLPremiati" />
+
+    <TextView
+        android:id="@+id/percento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="%"
+        android:layout_marginLeft="35dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="19dp"
+        app:layout_constraintTop_toBottomOf="@+id/JTIscritti" />
+
+</android.support.constraint.ConstraintLayout>
