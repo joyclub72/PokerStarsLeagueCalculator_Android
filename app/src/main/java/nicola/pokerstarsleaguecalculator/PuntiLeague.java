@@ -7,6 +7,7 @@ package nicola.pokerstarsleaguecalculator;
     public class PuntiLeague {
 
         static int premiati;
+        static int mancanti;
         double puntiAssegnati;
         double percentuale;
 
@@ -24,4 +25,9 @@ package nicola.pokerstarsleaguecalculator;
             percentuale = ((double) posizione * 100) / (double) iscritti;
             return percentuale;
         }
+        String mancanti(int premiati, int posizione) {
+            mancanti = posizione-premiati;
+            String strMancanti = String.valueOf(mancanti);
+            return strMancanti;
+    }
     }

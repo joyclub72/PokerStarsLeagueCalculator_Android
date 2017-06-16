@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
         final TextView JLPremiati = (TextView) findViewById(R.id.JLPremiati);
         final TextView JLPercentuale = (TextView) findViewById(R.id.JLPercentuale);
         final TextView JLPunti = (TextView) findViewById(R.id.JLPunti);
+        final TextView mancanti = (TextView) findViewById(R.id.mancanti);
+
         JTIscritti.addTextChangedListener(new TextWatcher() {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
@@ -78,13 +80,23 @@ public class MainActivity extends AppCompatActivity {
                         double puntiAssegnati = aPunti.puntiAssegnati(iscritti, posizione);
                         String strPuntiAssegnati = String.format("%.4g%n", puntiAssegnati);
                         JLPunti.setText(strPuntiAssegnati);
+                        mancanti.setText("0");
+                       }
+                    else {
+                        JLPunti.setText("0");
+                        mancanti.setText(aPunti.mancanti(premiati,posizione));
                     }
-                    else JLPunti.setText("0");
+
                 }
-                else JLPunti.setText("0");
+                else {
+                    JLPunti.setText("0");
+                    mancanti.setText("");
+                }
 
             }
         });
+
+
 
     }
 
